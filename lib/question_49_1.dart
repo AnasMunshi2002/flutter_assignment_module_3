@@ -1,26 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(GridApp());
-}
-
 class GridApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Grid App',
-      home: GridScreen(),
-    );
-  }
-}
-
-class GridScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-      child: SingleChildScrollView(
+      appBar: AppBar(
+        title: Text('Grid App'),
+      ),
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
@@ -63,6 +50,6 @@ class GridScreen extends StatelessWidget {
           ],
         ),
       ),
-    ));
+    );
   }
 }

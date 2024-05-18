@@ -4,18 +4,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 //53. create an application to change background when button is clicked.
-void main() {
-  runApp(MyApp());
-}
 
-class MyApp extends StatefulWidget {
+class Que53 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return BackgroundScreen();
   }
 }
 
-class BackgroundScreen extends State<MyApp> {
+class BackgroundScreen extends State<Que53> {
   List<Color> colorlist = [
     Colors.black45,
     Colors.brown,
@@ -45,28 +42,24 @@ class BackgroundScreen extends State<MyApp> {
         random_no++;
         bgcolor = colorlist[random_no];
       }
-      print(random_no);
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: bgcolor,
-        appBar: AppBar(
-          title: Text('AppBar'),
-        ),
-        body: Center(
-          child: OutlinedButton(
-              onPressed: () {
-                changeBackgroundColor();
-              },
-              style: ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(Colors.white)),
-              child: Text('Change Backgound Color')),
-        ),
+    return Scaffold(
+      backgroundColor: bgcolor,
+      appBar: AppBar(
+        title: Text('AppBar'),
+      ),
+      body: Center(
+        child: OutlinedButton(
+            onPressed: () {
+              changeBackgroundColor();
+            },
+            style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(Colors.white)),
+            child: Text('Change Backgound Color')),
       ),
     );
   }
