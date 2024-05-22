@@ -13,6 +13,7 @@ import 'package:flutter_assignment_module_3/question_56.dart';
 import 'package:flutter_assignment_module_3/question_57.dart';
 import 'package:flutter_assignment_module_3/question_58.dart';
 import 'package:flutter_assignment_module_3/question_59.dart';
+import 'package:flutter_assignment_module_3/question_60_1.dart';
 import 'package:flutter_assignment_module_3/questions.dart';
 
 void main() {
@@ -46,6 +47,7 @@ class QuestionListTile extends StatelessWidget {
       RadioColor(),
       Seekbar(),
       Login(),
+      Restaurant(),
     ];
     Ques que = Ques();
     que.addQuestion('Question 49.1 Create below screens');
