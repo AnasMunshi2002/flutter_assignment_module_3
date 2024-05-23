@@ -151,25 +151,24 @@ class _DishScreenState extends State<DishScreen> {
                     height: 30,
                   ),
                   Container(
-                    width: 200,
                     decoration: BoxDecoration(
                         color: Colors.grey.shade400,
                         borderRadius: BorderRadius.circular(50)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          '\$ ${totalAmount * count}',
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(width: 6),
-                        Expanded(
-                          flex: 3,
-                          child: Container(
+                    child: Expanded(
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            '\$ ${totalAmount * count}',
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(width: 6),
+                          Container(
                             decoration: BoxDecoration(
                                 color: Colors.amber,
                                 borderRadius: BorderRadius.circular(50)),
@@ -216,9 +215,9 @@ class _DishScreenState extends State<DishScreen> {
                                     )),
                               ],
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(

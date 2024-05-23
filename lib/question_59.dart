@@ -1,11 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
   TextEditingController userName = TextEditingController();
+
   TextEditingController password = TextEditingController();
+
+  bool secure = false;
 
   @override
   Widget build(BuildContext context) {
@@ -69,11 +78,29 @@ class Login extends StatelessWidget {
                 ),
                 TextField(
                   controller: password,
+                  obscureText: !secure,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), label: Text('Password')),
                 ),
                 SizedBox(
                   height: 30,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Checkbox(
+                      value: secure,
+                      onChanged: (value) {
+                        setState(() {
+                          secure = value!;
+                        });
+                      },
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text('Show Password'),
+                  ],
                 ),
                 FilledButton(
                   onPressed: () {
