@@ -14,6 +14,7 @@ import 'package:flutter_assignment_module_3/question_57.dart';
 import 'package:flutter_assignment_module_3/question_58.dart';
 import 'package:flutter_assignment_module_3/question_59.dart';
 import 'package:flutter_assignment_module_3/question_60_1.dart';
+import 'package:flutter_assignment_module_3/question_60_2.dart';
 import 'package:flutter_assignment_module_3/questions.dart';
 
 void main() {
@@ -34,6 +35,11 @@ class QuestionList extends StatelessWidget {
 class QuestionListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Dishes dishes = Dishes(
+        image: AssetImage('assets/images/soba-soup.jpeg'),
+        title: 'Soba Soup',
+        subtitle: 'No.1 in sales',
+        price: 12);
     List classess = [
       GridApp(),
       LakeScreen(),
@@ -48,6 +54,7 @@ class QuestionListTile extends StatelessWidget {
       Seekbar(),
       Login(),
       Restaurant(),
+      DishScreen(dishes),
     ];
     Ques que = Ques();
     que.addQuestion('Question 49.1 Create below screens');
