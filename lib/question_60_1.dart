@@ -59,6 +59,21 @@ class _RestaurantState extends State<Restaurant> {
         price: 12,
         subtitle: 'No.1 in sales',
         image: AssetImage('assets/images/Ratatoullie.jpeg')),
+    Dishes(
+        title: 'Khao Phat Soup',
+        price: 12,
+        subtitle: 'No.2 in sales',
+        image: AssetImage('assets/images/Khao-Phat.jpeg')),
+    Dishes(
+        title: 'Som Tam',
+        price: 12,
+        subtitle: 'No.2 in sales',
+        image: AssetImage('assets/images/Som-Tam.jpeg')),
+    Dishes(
+        title: 'Tom Yum Goong',
+        price: 12,
+        subtitle: 'No.1 in sales',
+        image: AssetImage('assets/images/Tom-Yum-Goong.jpeg')),
   ];
   @override
   Widget build(BuildContext context) {
